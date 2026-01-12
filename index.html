@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00ff66" />
+  <title>Portfolio BTS SIO SLAM — Evan ETHEVE</title>
+  <meta name="description" content="Portfolio BTS SIO SLAM — projets, compétences, veille, contact." />
+
+  <!-- Hint: tu peux changer le nom/prénom dans le titre + hero -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Si tu veux 100% offline, supprime la ligne ci-dessous -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background -->
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Top HUD -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand__name">PORTFOLIO</span>
+      <span class="brand__tag">BTS SIO • SLAM</span>
+    </div>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#about" class="nav__link">Présentation</a>
+      <a href="#project-pro" class="nav__link">Projet pro</a>
+      <a href="#education" class="nav__link">Parcours</a>
+      <a href="#experience" class="nav__link">Expérience</a>
+      <a href="#skills" class="nav__link">Compétences</a>
+      <a href="#certifs" class="nav__link">Diplômes</a>
+      <a href="#projects" class="nav__link">Projets</a>
+      <a href="#watch" class="nav__link">Veille</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <a href="#downloads" class="nav__link nav__link--cta">Téléchargements</a>
+    </nav>
+
+    <button id="cmdBtn" class="cmdBtn" type="button" aria-label="Ouvrir la console">
+      <span class="cmdBtn__icon">⌁</span>
+      <span class="cmdBtn__txt">console</span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__grid">
+        <div class="hero__left">
+          <div class="badge">
+            <span class="badge__pulse"></span>
+            <span class="badge__text">ONLINE</span>
+          </div>
+
+          <h1 class="glitch" data-text="Evan ETHEVE — Développeur SLAM">
+            Evan ETHEVE — Développeur SLAM
+          </h1>
+
+          <p class="hero__lead">
+            <span class="type" id="typed"></span><span class="caret" aria-hidden="true">▌</span>
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">
+              <span class="btn__spark"></span>
+              Voir mes projets
+            </a>
+            <a class="btn" href="#contact">Me contacter</a>
+          </div>
+
+        </div>
+
+        <div class="hero__right">
+          <div class="card card--hud">
+            <div class="card__head">
+              <span class="pill">SYSTEM</span>
+              <span class="pill pill--ok">SECURE</span>
+              <span class="pill pill--warn">TRACE</span>
+            </div>
+            <pre class="terminal" aria-label="Terminal décoratif">
+<span class="dim">[init]</span> booting portfolio kernel...
+<span class="dim">[ok]</span> modules: ui, matrix, glitch, reveal
+<span class="dim">[ok]</span> route-map: /about /projects /watch /contact
+<span class="dim">[info]</span> user: <span class="hi">evanetheve</span>
+<span class="dim">[info]</span> mode: <span class="hi">bts-sio-slam</span>
+<span class="dim">[ready]</span> press <span class="kbd">⌁</span> to open console
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <h2 class="section__title">Présentation rapide</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel reveal">
+          <h3 class="panel__title">Qui suis‑je ?</h3>
+          <p class="panel__text">
+            <span class="hi">Evan,</span> étudiant en 2ème année de BTS SIO (option SLAM).
+            J’aime concevoir des interfaces propres, coder des applis utiles, et documenter mes projets.
+          </p>
+          <ul class="bullets">
+            <li>📍 Ville : <span class="dim">Saint Romain En Gier</span></li>
+            <li>🎯 Objectif : <span class="dim">[à compléter]</span></li>
+            <li>🧠 Centres d’intérêt : <span class="dim">[à compléter]</span></li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <h3 class="panel__title">Profil express</h3>
+          <div class="kv">
+            <div class="kv__row"><span class="kv__k">Formation</span><span class="kv__v">BTS SIO • SLAM</span></div>
+            <div class="kv__row"><span class="kv__k">Spécialités</span><span class="kv__v">Web, POO, bases de données</span></div>
+            <div class="kv__row"><span class="kv__k">Outils</span><span class="kv__v">Git/GitHub, MySQL, WordPress</span></div>
+            <div class="kv__row"><span class="kv__k">Projet</span><span class="kv__v">Bachelor/Master en alternance</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="project-pro">
+      <div class="section__head">
+        <h2 class="section__title">Projet professionnel</h2>
+      </div>
+      <div class="panel reveal">
+        <p class="panel__text">
+          Mon objectif est de <span class="hi">poursuivre mes études en Bachelor ou Master en alternance</span>,
+          afin d’enrichir mes compétences et d’acquérir une <span class="hi">expérience professionnelle solide</span>
+          dans le domaine de l’informatique.
+        </p>
+        <div class="tags">
+          <span class="tag">#alternance</span>
+          <span class="tag">#développement</span>
+          <span class="tag">#web</span>
+          <span class="tag">#logiciel</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section__head">
+        <h2 class="section__title">Parcours scolaire</h2>
+        <p class="section__sub">Timeline (tu remplaceras les contenus).</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <div class="tl__top">
+              <span class="tl__title">BTS SIO — Option SLAM</span>
+              <span class="tl__date">2024 → aujourd’hui</span>
+            </div>
+            <p class="tl__text">Formation axée sur le développement d’applications et la gestion des systèmes d’information.</p>
+            <p class="tl__text dim">Lycée Georges Brassens — Rive-de-Gier</p>
+          </div>
+        </div>
+
+        <div class="tl">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <div class="tl__top">
+              <span class="tl__title">Bac Général — NSI / AMC (Mention Bien)</span>
+              <span class="tl__date">2021 → 2024</span>
+            </div>
+            <p class="tl__text">Spécialisation en NSI avec de solides bases en algorithmique et programmation.</p>
+            <p class="tl__text dim">Lycée Aragon Picasso — Givors</p>
+          </div>
+        </div>
+
+        <div class="tl">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <div class="tl__top">
+              <span class="tl__title">Collège — Lucie Aubrac</span>
+              <span class="tl__date">2017-2021</span>
+            </div>
+            <p class="tl__text">Période formatrice marquée par la découverte des nouvelles technologies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section__head">
+        <h2 class="section__title">Expérience professionnelle</h2>
+        <p class="section__sub">Stages, alternance, jobs (impact + résultats).</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel reveal">
+          <h3 class="panel__title">Stage — Innolive (Agence 360°)</h3>
+          <p class="panel__text dim">6 semaines • Création de sites WordPress pour des clients</p>
+          <ul class="bullets">
+            <li>Création / intégration de pages et contenus sur WordPress</li>
+            <li>Adaptation du site aux besoins du client (structure, design, contenu)</li>
+            <li>Exemple : <a class="link" href="https://competences-changements.fr" target="_blank" rel="noreferrer">competences-changements.fr</a></li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <h3 class="panel__title">Stage — Innolive (2ᵉ période)</h3>
+          <p class="panel__text dim">6 semaines • Sites clients + site officiel</p>
+          <ul class="bullets">
+            <li>Réalisation d’autres sites WordPress (clients)</li>
+            <li>Participation à des améliorations sur le site web officiel de l’agence</li>
+            <li>Exemple : <a class="link" href="https://marquetetfils.fr" target="_blank" rel="noreferrer">marquetetfils.fr</a> (poêles à bois / chauffagistes)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section__head">
+        <h2 class="section__title">Compétences</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel reveal">
+          <h3 class="panel__title">Développement</h3>
+          <div class="bars">
+            <div class="bar" style="--p: 85%"><span class="bar__k">HTML/CSS</span><span class="bar__v">85</span><span class="bar__fill"></span></div>
+            <div class="bar" style="--p: 78%"><span class="bar__k">JavaScript</span><span class="bar__v">71</span><span class="bar__fill"></span></div>
+            <div class="bar" style="--p: 70%"><span class="bar__k">Python</span><span class="bar__v">70</span><span class="bar__fill"></span></div>
+            <div class="bar" style="--p: 66%"><span class="bar__k">SQL</span><span class="bar__v">66</span><span class="bar__fill"></span></div>
+          </div>
+        </article>
+
+        <article class="panel reveal">
+          <h3 class="panel__title">Langages pratiqués</h3>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">POO</span>
+          </div>
+
+          <h3 class="panel__title" style="margin-top:14px;">Outils utilisés</h3>
+          <div class="tags">
+            <span class="tag">Laragon</span>
+            <span class="tag">XAMPP</span>
+            <span class="tag">Cisco Packet Tracer</span>
+            <span class="tag">VMware</span>
+            <span class="tag">MobaXterm</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">WordPress</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="certifs">
+      <div class="section__head">
+        <h2 class="section__title">Diplômes & certifications</h2>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <article class="mini">
+          <div class="mini__icon">✓</div>
+          <div class="mini__body">
+            <h3 class="mini__title">MOOC CNIL</h3>
+            <p class="mini__text dim">Sensibilisation RGPD & protection des données</p>
+          </div>
+        </article>
+
+        <article class="mini">
+          <div class="mini__icon">✓</div>
+          <div class="mini__body">
+            <h3 class="mini__title">PIX</h3>
+            <p class="mini__text dim">Compétences numériques</p>
+          </div>
+        </article>
+
+        <article class="mini">
+          <div class="mini__icon">✓</div>
+          <div class="mini__body">
+            <h3 class="mini__title">SecNum Académie</h3>
+            <p class="mini__text dim">Bases cybersécurité (ANSSI)</p>
+          </div>
+        </article>
+
+        <article class="mini">
+          <div class="mini__icon">⌁</div>
+          <div class="mini__body">
+            <h3 class="mini__title">Certification Office (en cours)</h3>
+            <p class="mini__text dim">Préparation • Word / Excel / PowerPoint</p>
+          </div>
+        </article>
+
+        <article class="mini">
+          <div class="mini__icon">⌁</div>
+          <div class="mini__body">
+            <h3 class="mini__title">Unity (en cours)</h3>
+            <p class="mini__text dim">C# • logique de programmation</p>
+          </div>
+        </article>
+
+        <article class="mini">
+          <div class="mini__icon">✓</div>
+          <div class="mini__body">
+            <h3 class="mini__title">Bac Général (Mention Assez Bien)</h3>
+            <p class="mini__text dim">NSI / AMC • 2024</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2 class="section__title">Projets</h2>
+      </div>
+
+      <div class="cards reveal">
+        <article class="proj" data-modal="unity">
+          <div class="proj__top">
+            <h3 class="proj__title">Projet WoodyCraft</h3>
+            <span class="proj__badge">Laravel • Tailwind</span>
+          </div>
+          <p class="proj__text dim">
+            Site e-commerce : catalogue, panier/gestion produits, CRUD, MVC, tests unitaires.
+          </p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
+          </div>
+        </article>
+
+        <article class="proj" data-modal="unity">
+          <div class="proj__top">
+            <h3 class="proj__title">Jeu vidéo (Unity)</h3>
+            <span class="proj__badge">C# • Unity</span>
+          </div>
+          <p class="proj__text dim">
+            Projet ludique mettant en pratique C# et la logique de programmation.
+          </p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
+          </div>
+        </article>
+        
+        <article class="proj" data-modal="monopoly">
+          <div class="proj__top">
+            <h3 class="proj__title">Création d’un Monopoly</h3>
+            <span class="proj__badge">Python</span>
+          </div>
+          <p class="proj__text dim">Réinterprétation numérique du jeu de société : règles & interface interactive.</p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="watch">
+      <div class="section__head">
+        <h2 class="section__title">Veille technologique</h2>
+      </div>
+
+      <div class="panel reveal">
+        <div class="watch__topic">
+          <span class="pill">Sujet</span>
+          <h3 class="watch__title">Veille technologique — à peaufiner (UnrealEngine , c++ , java)</h3>
+        </div>
+
+        <div class="watch__grid">
+          <article class="watch__card">
+            <h4 class="watch__h">Mars 2025</h4>
+            <p class="watch__p dim">Résumé du mois (2–4 lignes). Sources : articles, docs, podcasts…</p>
+          </article>
+          <article class="watch__card">
+            <h4 class="watch__h">Avril 2025</h4>
+            <p class="watch__p dim">Résumé du mois (2–4 lignes).</p>
+          </article>
+          <article class="watch__card">
+            <h4 class="watch__h">Mai 2025</h4>
+            <p class="watch__p dim">Résumé du mois (2–4 lignes).</p>
+          </article>
+          <article class="watch__card">
+            <h4 class="watch__h">…</h4>
+            <p class="watch__p dim">On complètera jusqu’à aujourd’hui.</p>
+          </article>
+        </div>
+
+        <div class="watch__sources">
+          <span class="dim">Sources (à ajouter) :</span>
+          <div class="tags">
+            <span class="tag">Doc officielle</span>
+            <span class="tag">Blog technique</span>
+            <span class="tag">Conférences</span>
+            <span class="tag">Veille RSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel reveal">
+          <h3 class="panel__title">Coordonnées</h3>
+          <div class="kv">
+            <div class="kv__row"><span class="kv__k">Email</span><span class="kv__v"><a class="link" href="mailto:evanethevepro@gmail.com">evanethevepro@gmail.com</a></span></div>
+            <div class="kv__row"><span class="kv__k">Téléphone</span><span class="kv__v"><a class="link" href="tel:+33787770521">07 87 77 05 21</a></span></div>
+            <div class="kv__row"><span class="kv__k">LinkedIn</span><span class="kv__v"><a class="link" href="#" onclick="return false;">Evan ETHEVE</a></span></div>
+            <div class="kv__row"><span class="kv__k">GitHub</span><span class="kv__v"><a class="link" href="https://github.com/EvanSurGit" target="_blank" rel="noreferrer">EvanSurGit</a></span></div>
+          </div>
+        </article>
+
+        <form class="panel reveal form" id="contactForm">
+          <h3 class="panel__title">Envoyer un message</h3>
+          <label class="field">
+            <span class="field__label">Nom</span>
+            <input class="field__input" name="name" placeholder="Ton nom" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input class="field__input" type="email" name="email" placeholder="ton@mail.com" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Message</span>
+            <textarea class="field__input field__input--area" name="message" rows="4" placeholder="Écris ton message..." required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">
+            <span class="btn__spark"></span>
+            Envoyer
+          </button>
+          <p class="form__hint dim" id="formHint"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="downloads">
+      <div class="section__head">
+        <h2 class="section__title">Documents à télécharger</h2>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <a class="dl" href="docs/CV.pdf" download>
+          <span class="dl__icon">⇩</span>
+          <span class="dl__name">CV (PDF)</span>
+          <span class="dl__meta dim">docs/CV.pdf</span>
+        </a>
+        <a class="dl" href="docs/Rapport_Stage_1.pdf" download>
+          <span class="dl__icon">⇩</span>
+          <span class="dl__name">Rapport de stage</span>
+          <span class="dl__meta dim">docs/Rapport_Stage.pdf</span>
+        </a>
+        <a class="dl" href="docs/Tableau_Competences.xlsx" download>
+          <span class="dl__icon">⇩</span>
+          <span class="dl__name">Compétences (Excel)</span>
+          <span class="dl__meta dim">docs/Tableau_Competences.xlsx</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__left">
+          <span class="dim">©</span> <span id="year"></span> <span class="hi">Evan ETHEVE</span>
+          <span class="sep">•</span>
+          <span class="dim">BTS SIO SLAM</span>
+        </div>
+        <div class="footer__right">
+          <a class="link" href="#top">Retour haut</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <dialog class="modal" id="modal">
+    <div class="modal__inner">
+      <div class="modal__head">
+        <h3 class="modal__title" id="modalTitle">Détails</h3>
+        <button class="x" id="modalClose" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+      <div class="modal__foot">
+        <button class="btn btn--ghost" id="modalOk" type="button">OK</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Console overlay -->
+  <aside class="console" id="console" aria-hidden="true">
+    <div class="console__head">
+      <span class="pill">CONSOLE</span>
+      <span class="dim">cmd</span>
+      <button class="x" id="consoleClose" aria-label="Fermer">✕</button>
+    </div>
+    <div class="console__log" id="consoleLog" aria-live="polite"></div>
+    <form class="console__form" id="consoleForm">
+      <span class="console__prompt">evan@portfolio:~$</span>
+      <input class="console__input" id="consoleInput" autocomplete="off" placeholder="help, goto projects, matrix off, speed 0.08..." />
+    </form>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
