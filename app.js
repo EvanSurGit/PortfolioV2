@@ -145,58 +145,175 @@ ${message}`);
   });
 
 
-  // Modal (project details)
+  // ==========================================================================
+  // MODAL AVANCÉE (Carousel + Détails E5)
+  // ==========================================================================
+  
   const modal = document.getElementById("modal");
   const modalTitle = document.getElementById("modalTitle");
   const modalBody = document.getElementById("modalBody");
   const modalClose = document.getElementById("modalClose");
   const modalOk = document.getElementById("modalOk");
 
-  const projectDetails = {
-    unity: {
-      title: "WoodyCraft — E-commerce de puzzles en bois",
-      body: `
-        <p><span class="hi">WoodyCraft</span> est un site e-commerce développé avec <span class="hi">Laravel</span> (Laragon) et <span class="hi">Tailwind</span>.</p>
-        <ul>
-          <li><span class="hi">MVC</span> : séparation Modèle / Vue / Contrôleur.</li>
-          <li><span class="hi">CRUD</span> : création, lecture, modification, suppression des produits.</li>
-          <li><span class="hi">BDD</span> : MySQL (HeidiSQL) pour gérer les données.</li>
-          <li><span class="hi">Tests unitaires</span> : vérification du bon fonctionnement de certaines fonctionnalités.</li>
-        </ul>
-      `
+const projectDetails = {
+    woody: {
+      title: "WoodyCraft — E-commerce (Laravel)",
+      images: [
+        "img/woody_accueil.jpg",
+        "img/woody_produit.jpg",
+        "img/woody_admin.jpg"
+      ],
+      desc: "Site e-commerce complet de vente de puzzles en bois, avec gestion catalogue et panier.",
+      tech: ["Laravel", "Tailwind CSS", "MySQL", "MVC"],
+      role: "Développeur Full Stack (Projet scolaire)",
+      objective: "Comprendre l'architecture MVC et réaliser un CRUD complet sécurisé.",
+      results: "Site fonctionnel avec authentification, back-office administrateur et panier persistant.",
+      difficulties: "La gestion des relations Eloquent (ORM) entre les tables Produits et Catégories a été complexe au début."
     },
     
     unity: {
-      title: "Jeu vidéo (Unity) — Détails",
-      body: `
-        <p><span class="hi">Objectif</span> : créer un jeu vidéo sous <span class="hi">Unity</span> en <span class="hi">C#</span> pour appliquer la logique de programmation.</p>
-        <ul>
-          <li>Gestion des scènes, déplacements, collisions, UI.</li>
-          <li>Organisation du code (scripts), logique de gameplay.</li>
-        </ul>
-        <p class="dim">👉 Tu peux ajouter : features, captures, lien de démo, difficultés rencontrées.</p>
-      `
+      title: "Certification Unity — Jeu de Course",
+      images: [
+        "img/unity_setup.jpg",
+        "img/unity_game.jpg"
+      ],
+      desc: "Projet réalisé en autonomie via un parcours de certification en ligne. Création d'un jeu de course simple (voiture sur ligne droite devant éviter des obstacles).",
+      tech: ["Unity", "C#", "Virtual Machine", "Visual Studio"],
+      role: "Autodidacte / Apprenant",
+      objective: "Passer de la logique 'Drag & Drop' au développement scripté en C# et découvrir l'environnement Unity.",
+      results: "Compréhension de la physique du moteur et du scripting, malgré un environnement technique très contraint.",
+      difficulties: "Environnement bloquant au lycée (installation interdite). Solution : utilisation d'une VM qui a causé d'énormes lenteurs et un manque d'espace disque, entraînant malheureusement la perte d'une partie des sources."
     },
     
     monopoly: {
-      title: "Création d’un Monopoly (Python) — Détails",
-      body: `
-        <p><span class="hi">Objectif</span> : réinterpréter le Monopoly en version numérique.</p>
-        <ul>
-          <li>Règles : achats, loyers, tours, événements.</li>
-          <li>Structuration du code (POO) et interface.</li>
-        </ul>
-      `
+      title: "Monopoly — Version Console (Python)",
+      images: [
+        "img/python_code.jpg",
+        "img/python_run.jpg"
+      ],
+      desc: "Réimplémentation des règles du Monopoly en ligne de commande.",
+      tech: ["Python", "POO", "Algorithmique"],
+      role: "Développeur Backend",
+      objective: "Structurer un programme complexe avec des classes (Joueur, Plateau, Case).",
+      results: "Partie jouable en local à 4 joueurs avec gestion de l'argent et des propriétés.",
+      difficulties: "La gestion des tours de jeu et des cas particuliers (prison, doubles) a demandé une machine à états rigoureuse."
+    },
+
+    // --- MISE À JOUR DES STAGES ---
+
+    stage1: {
+      title: "Stage 1 : Découverte & Intégration Web",
+      images: [
+        "img/stage_figma.jpg", 
+        "img/stage_wp_admin.jpg",
+        "img/stage_resultat.jpg"
+      ],
+      desc: "Ma toute première expérience en entreprise. J'ai découvert le métier d'intégrateur web au sein de l'agence Innolive.",
+      tech: ["WordPress", "Elementor", "Figma", "Relation Client"],
+      role: "Stagiaire Intégrateur (Apprentissage 'From Scratch')",
+      objective: "Apprendre à construire un site professionnel de A à Z en suivant un processus strict (Wireframe > Maquette > Site).",
+      results: "J'ai appris WordPress en partant de zéro grâce à d'excellents maîtres de stage. Le site 'competences-changements.fr' a été livré au client.",
+      difficulties: "La réalité du terrain : un projet est beaucoup plus long qu'on ne le pense. Le plus dur a été de devoir refaire entièrement une maquette que je pensais finie, car la cliente ne s'y retrouvait plus. Il a fallu s'adapter et recommencer."
+    },
+
+    stage2: {
+      title: "Stage 2 : Autonomie & Perfectionnisme",
+      images: [
+        "img/stage_marquet_shop.jpg", 
+        "img/stage_marquet_responsive.jpg",
+        "img/stage_equipe.jpg"
+      ],
+      desc: "Retour chez Innolive avec de nouveaux collègues. Une intégration humaine réussie (je faisais partie de l'équipe), mais un défi technique plus solitaire.",
+      tech: ["WooCommerce", "CSS Responsive", "Maintenance", "Travail d'équipe"],
+      role: "Développeur Web (Semi-Autonome)",
+      objective: "Gérer des tâches complexes sur des sites existants (boutique en ligne, responsive design) et participer à la refonte du site de l'agence.",
+      results: "Pour Marquet & Fils : création de pages, gestion de la boutique et réalisation intégrale du Responsive Design. Le site de l'agence est lui toujours en maintenance, témoin de l'exigence de perfection.",
+      difficulties: "Le paradoxe de l'autonomie : je me suis senti intégré humainement, mais plus 'perdu' techniquement car moins aidé. Le rythme était parfois frustrant : on voulait que tout soit parfait, ce qui ralentissait considérablement la mise en production."
     }
+  };
+  let currentSlideIndex = 0;
+
+  function buildModalContent(key) {
+    const p = projectDetails[key];
+    if (!p) return "<p>Projet introuvable.</p>";
+
+    const slidesHtml = p.images.map((src, i) => `
+      <img src="${src}" class="carousel__slide ${i === 0 ? 'active' : ''}" alt="Slide ${i+1}" onerror="this.style.display='none'">
+    `).join("");
+
+    const dotsHtml = p.images.map((_, i) => `
+      <div class="carousel__dot ${i === 0 ? 'active' : ''}" onclick="goToSlide(${i})"></div>
+    `).join("");
+
+    const techTags = p.tech.map(t => `<span class="tag">${t}</span>`).join("");
+
+    return `
+      <div class="modal__grid">
+        <div class="carousel">
+          ${p.images.length > 1 ? '<button class="carousel__btn carousel__btn--prev" onclick="moveSlide(-1)">&#10094;</button>' : ''}
+          <div class="carousel__slides">${slidesHtml || '<div style="padding:20px; text-align:center; color:#fff;">Aucune image</div>'}</div>
+          ${p.images.length > 1 ? '<button class="carousel__btn carousel__btn--next" onclick="moveSlide(1)">&#10095;</button>' : ''}
+          <div class="carousel__dots">${dotsHtml}</div>
+        </div>
+
+        <div>
+          <div class="details__section">
+            <h4 class="details__title"> Présentation</h4>
+            <p class="details__text">${p.desc}</p>
+            <div class="tech-tags">${techTags}</div>
+          </div>
+
+          <div class="grid grid--2">
+             <div class="details__section">
+                <h4 class="details__title"> Rôle & Objectif</h4>
+                <p class="details__text"><strong>Rôle :</strong> <span class="dim">${p.role}</span></p>
+                <p class="details__text" style="margin-top:5px;"><strong>Objectif :</strong> <span class="dim">${p.objective}</span></p>
+             </div>
+             <div class="details__section">
+                <h4 class="details__title"> Résultats</h4>
+                <p class="details__text">${p.results}</p>
+             </div>
+          </div>
+
+          <div class="details__section">
+            <h4 class="details__title"> Difficultés rencontrées</h4>
+            <p class="details__text" style="color:#ff6b6b;">${p.difficulties}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  window.moveSlide = function(step) {
+    const slides = document.querySelectorAll(".carousel__slide");
+    const dots = document.querySelectorAll(".carousel__dot");
+    if(!slides.length) return;
+    slides[currentSlideIndex].classList.remove("active");
+    if(dots[currentSlideIndex]) dots[currentSlideIndex].classList.remove("active");
+    currentSlideIndex = (currentSlideIndex + step + slides.length) % slides.length;
+    slides[currentSlideIndex].classList.add("active");
+    if(dots[currentSlideIndex]) dots[currentSlideIndex].classList.add("active");
+  };
+
+  window.goToSlide = function(index) {
+    const slides = document.querySelectorAll(".carousel__slide");
+    const dots = document.querySelectorAll(".carousel__dot");
+    slides[currentSlideIndex].classList.remove("active");
+    if(dots[currentSlideIndex]) dots[currentSlideIndex].classList.remove("active");
+    currentSlideIndex = index;
+    slides[currentSlideIndex].classList.add("active");
+    if(dots[currentSlideIndex]) dots[currentSlideIndex].classList.add("active");
   };
 
   function openModal(key){
     const d = projectDetails[key];
     if(!d || !modal) return;
+    currentSlideIndex = 0;
     modalTitle.textContent = d.title;
-    modalBody.innerHTML = d.body;
+    modalBody.innerHTML = buildModalContent(key);
     modal.showModal();
   }
+
   function closeModal(){ if(modal?.open) modal.close(); }
 
   modalClose?.addEventListener("click", closeModal);
