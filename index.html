@@ -7,22 +7,18 @@
   <title>Portfolio BTS SIO SLAM — Evan ETHEVE</title>
   <meta name="description" content="Portfolio BTS SIO SLAM — projets, compétences, veille, contact." />
 
-  <!-- Hint: tu peux changer le nom/prénom dans le titre + hero -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Si tu veux 100% offline, supprime la ligne ci-dessous -->
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Background -->
   <canvas id="matrix" aria-hidden="true"></canvas>
   <div class="scanlines" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
 
-  <!-- Top HUD -->
   <header class="topbar">
     <div class="brand">
       <span class="dot"></span>
@@ -31,16 +27,12 @@
     </div>
 
     <nav class="nav" aria-label="Navigation principale">
-      <a href="#about" class="nav__link">Présentation</a>
-      <a href="#project-pro" class="nav__link">Projet pro</a>
-      <a href="#education" class="nav__link">Parcours</a>
-      <a href="#experience" class="nav__link">Expérience</a>
-      <a href="#skills" class="nav__link">Compétences</a>
-      <a href="#certifs" class="nav__link">Diplômes</a>
-      <a href="#projects" class="nav__link">Projets</a>
+      <a href="#about" class="nav__link">Profil</a>
+      <a href="#projects" class="nav__link">Projets École</a>
       <a href="#watch" class="nav__link">Veille</a>
+      <a href="#experience" class="nav__link">Projets Pro</a>
       <a href="#contact" class="nav__link">Contact</a>
-      <a href="#downloads" class="nav__link nav__link--cta">Téléchargements</a>
+      <a href="#downloads" class="nav__link nav__link--cta">Docs & E4</a>
     </nav>
 
     <button id="cmdBtn" class="cmdBtn" type="button" aria-label="Ouvrir la console">
@@ -49,7 +41,6 @@
     </button>
   </header>
 
-  <!-- Hero -->
   <main>
     <section class="hero" id="top">
       <div class="hero__grid">
@@ -97,7 +88,6 @@
       </div>
     </section>
 
-    <!-- Sections -->
     <section class="section" id="about">
       <div class="section__head">
         <h2 class="section__title">Présentation rapide</h2>
@@ -111,9 +101,9 @@
             J’aime concevoir des interfaces propres, coder des applis utiles, et documenter mes projets.
           </p>
           <ul class="bullets">
-            <li>📍 Ville : <span class="dim">Saint Romain En Gier</span></li>
-            <li>🎯 Objectif : <span class="dim">[à compléter]</span></li>
-            <li>🧠 Centres d’intérêt : <span class="dim">[à compléter]</span></li>
+            <li>Ville : <span class="dim">Saint Romain En Gier</span></li>
+            <li>Objectif : <span class="dim">Développeur Full Stack</span></li>
+            <li>Centres d’intérêt : <span class="dim">Développement Web, Jeux Vidéo, Veille Tech</span></li>
           </ul>
         </article>
 
@@ -129,29 +119,9 @@
       </div>
     </section>
 
-    <section class="section" id="project-pro">
-      <div class="section__head">
-        <h2 class="section__title">Projet professionnel</h2>
-      </div>
-      <div class="panel reveal">
-        <p class="panel__text">
-          Mon objectif est de <span class="hi">poursuivre mes études en Bachelor ou Master en alternance</span>,
-          afin d’enrichir mes compétences et d’acquérir une <span class="hi">expérience professionnelle solide</span>
-          dans le domaine de l’informatique.
-        </p>
-        <div class="tags">
-          <span class="tag">#alternance</span>
-          <span class="tag">#développement</span>
-          <span class="tag">#web</span>
-          <span class="tag">#logiciel</span>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="education">
       <div class="section__head">
         <h2 class="section__title">Parcours scolaire</h2>
-        <p class="section__sub">Timeline (tu remplaceras les contenus).</p>
       </div>
 
       <div class="timeline reveal">
@@ -178,45 +148,178 @@
             <p class="tl__text dim">Lycée Aragon Picasso — Givors</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="tl">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <div class="tl__top">
-              <span class="tl__title">Collège — Lucie Aubrac</span>
-              <span class="tl__date">2017-2021</span>
-            </div>
-            <p class="tl__text">Période formatrice marquée par la découverte des nouvelles technologies.</p>
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2 class="section__title">Projets en cours (Formation)</h2>
+      </div>
+
+      <div class="cards reveal">
+        <article class="proj" data-modal="woody">
+          <div class="proj__top">
+            <h3 class="proj__title">Projet WoodyCraft</h3>
+            <span class="proj__badge">Laravel • Tailwind</span>
           </div>
-        </div>
+          <p class="proj__text dim">
+            Site e-commerce : catalogue, panier/gestion produits, CRUD, MVC, tests unitaires.
+          </p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
+          </div>
+        </article>
+
+        <article class="proj" data-modal="unity">
+          <div class="proj__top">
+            <h3 class="proj__title">Jeu vidéo (Unity)</h3>
+            <span class="proj__badge">C# • Unity</span>
+          </div>
+          <p class="proj__text dim">
+            Projet ludique mettant en pratique C# et la logique de programmation.
+          </p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
+          </div>
+        </article>
+        
+        <article class="proj" data-modal="monopoly">
+          <div class="proj__top">
+            <h3 class="proj__title">Création d’un Monopoly</h3>
+            <span class="proj__badge">Python</span>
+          </div>
+          <p class="proj__text dim">Réinterprétation numérique du jeu de société : règles & interface interactive.</p>
+          <div class="proj__actions">
+            <button class="btn btn--small" type="button">Détails</button>
+            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="watch">
+      <div class="section__head">
+        <h2 class="section__title">Veille Technologique</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="panel reveal">
+          <h3 class="panel__title">🛠️ Méthodologie & Outils</h3>
+          <p class="panel__text dim">
+            Ma veille est automatisée pour ne rater aucune info importante sans y passer trop de temps quotidiennement.
+          </p>
+          
+          <div class="timeline" style="margin-top:20px;">
+            <div class="tl">
+              <div class="tl__dot" style="background:var(--green)"></div>
+              <div class="tl__content" style="padding:10px;">
+                <strong style="color:#fff">1. Collecte Automatisée (Google Alerts)</strong>
+                <p class="tl__text" style="font-size:0.9rem">
+                  Mots-clés surveillés : <span class="code">Unreal Engine</span> <span class="code">C++</span> <span class="code">Java</span>. 
+                  Réception d'un feedback hebdomadaire par email.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl">
+              <div class="tl__dot" style="background:var(--green)"></div>
+              <div class="tl__content" style="padding:10px;">
+                <strong style="color:#fff">2. Analyse & Compréhension (IA)</strong>
+                <p class="tl__text" style="font-size:0.9rem">
+                  Utilisation d'assistants IA pour vulgariser les concepts complexes (ex: rendu Nanite) et accélérer la compréhension.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl">
+              <div class="tl__dot" style="background:var(--green)"></div>
+              <div class="tl__content" style="padding:10px;">
+                <strong style="color:#fff">3. Synthèse (GitHub)</strong>
+                <p class="tl__text" style="font-size:0.9rem">
+                  Sélection de l'actu la plus pertinente de la semaine et rédaction d'une synthèse sur un repo GitHub personnel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel reveal">
+          <div class="watch__topic" style="border-bottom:none; margin-bottom:10px;">
+            <span class="pill">Sujet principal</span>
+            <h3 class="watch__title">Évolution des moteurs (Unreal Engine & C++)</h3>
+          </div>
+
+          <p class="panel__text">
+            Mon sujet porte sur les avancées techniques des moteurs de jeu récents, spécifiquement l'optimisation des performances avec C++.
+          </p>
+
+          <h4 class="watch__h" style="margin-top:20px; color:#fff;">📅 Bilan de l'année écoulée</h4>
+          <p class="panel__text dim">
+            Cette année a été marquée par la consolidation d'<strong>Unreal Engine 5</strong>.
+          </p>
+          <ul class="bullets" style="margin-top:10px;">
+            <li>
+              <span class="hi">Optimisation Nanite/Lumen :</span> Au début très gourmands, ces technologies de géométrie et d'éclairage dynamique se sont démocratisées pour tourner sur des configurations plus modestes (60 FPS stable).
+            </li>
+            <li>
+              <span class="hi">C++ Modern :</span> L'industrie adopte progressivement les standards C++20/23 pour une gestion mémoire plus sécurisée, réduisant les crashs critiques dans les gros projets.
+            </li>
+            <li>
+              <span class="hi">Procedural Content Generation (PCG) :</span> Nouvelle méthode forte cette année pour générer des mondes immenses automatiquement via des graphes, sans placer chaque arbre à la main.
+            </li>
+          </ul>
+          
+          <div style="margin-top:20px; text-align:right;">
+             <a href="https://github.com/EvanSurGit" target="_blank" class="btn btn--small btn--ghost">Voir mon Repo GitHub Veille</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section" id="experience">
       <div class="section__head">
-        <h2 class="section__title">Expérience professionnelle</h2>
-        <p class="section__sub">Stages, alternance, jobs (impact + résultats).</p>
+        <h2 class="section__title">Projets en milieu professionnel</h2>
+        <p class="section__sub">
+          Stages et missions en entreprise. 
+          <a href="docs/Tableau_Competences.xlsx" download class="link hi" style="margin-left:10px;">
+            📄 Voir le Tableau de compétences (Excel)
+          </a>
+        </p>
       </div>
 
       <div class="grid grid--2">
-        <article class="panel reveal">
-          <h3 class="panel__title">Stage — Innolive (Agence 360°)</h3>
-          <p class="panel__text dim">6 semaines • Création de sites WordPress pour des clients</p>
+        <article class="panel reveal proj" data-modal="stage1" style="cursor:pointer">
+          <div class="proj__top">
+             <h3 class="panel__title">Stage — Innolive (Agence 360°)</h3>
+             <span class="proj__badge">WordPress • Figma</span>
+          </div>
+          <p class="panel__text dim">6 semaines • Création de sites vitrines & intégration.</p>
           <ul class="bullets">
-            <li>Création / intégration de pages et contenus sur WordPress</li>
-            <li>Adaptation du site aux besoins du client (structure, design, contenu)</li>
-            <li>Exemple : <a class="link" href="https://competences-changements.fr" target="_blank" rel="noreferrer">competences-changements.fr</a></li>
+            <li>Flux de travail : Maquette Figma → Intégration Elementor.</li>
+            <li>Respect de la charte graphique et responsive design.</li>
+            <li>Exemple : <span class="hi">competences-changements.fr</span></li>
           </ul>
+          <div class="proj__actions" style="margin-top:15px">
+            <button class="btn btn--small" type="button">Voir le détail technique</button>
+          </div>
         </article>
 
-        <article class="panel reveal">
-          <h3 class="panel__title">Stage — Innolive (2ᵉ période)</h3>
-          <p class="panel__text dim">6 semaines • Sites clients + site officiel</p>
+        <article class="panel reveal proj" data-modal="stage2" style="cursor:pointer">
+          <div class="proj__top">
+             <h3 class="panel__title">Stage — Innolive (2ᵉ période)</h3>
+             <span class="proj__badge">Optimisation • SEO</span>
+          </div>
+          <p class="panel__text dim">6 semaines • Performance, Sécurité & Maintenance.</p>
           <ul class="bullets">
-            <li>Réalisation d’autres sites WordPress (clients)</li>
-            <li>Participation à des améliorations sur le site web officiel de l’agence</li>
-            <li>Exemple : <a class="link" href="https://marquetetfils.fr" target="_blank" rel="noreferrer">marquetetfils.fr</a> (poêles à bois / chauffagistes)</li>
+            <li>Audit technique et amélioration des scores Lighthouse.</li>
+            <li>Sécurisation (SSL/HTTPS) et conformité RGPD.</li>
+            <li>Exemple : <span class="hi">marquetetfils.fr</span></li>
           </ul>
+          <div class="proj__actions" style="margin-top:15px">
+            <button class="btn btn--small" type="button">Voir le détail technique</button>
+          </div>
         </article>
       </div>
     </section>
@@ -298,7 +401,7 @@
         <article class="mini">
           <div class="mini__icon">⌁</div>
           <div class="mini__body">
-            <h3 class="mini__title">Certification Office (en cours)</h3>
+            <h3 class="mini__title">Certification Office</h3>
             <p class="mini__text dim">Préparation • Word / Excel / PowerPoint</p>
           </div>
         </article>
@@ -314,99 +417,29 @@
         <article class="mini">
           <div class="mini__icon">✓</div>
           <div class="mini__body">
-            <h3 class="mini__title">Bac Général (Mention Assez Bien)</h3>
+            <h3 class="mini__title">Bac Général (Mention AB)</h3>
             <p class="mini__text dim">NSI / AMC • 2024</p>
           </div>
         </article>
       </div>
     </section>
+    
 
-    <section class="section" id="projects">
+    <section class="section" id="project-pro">
       <div class="section__head">
-        <h2 class="section__title">Projets</h2>
+        <h2 class="section__title">Projet professionnel</h2>
       </div>
-
-      <div class="cards reveal">
-        <article class="proj" data-modal="unity">
-          <div class="proj__top">
-            <h3 class="proj__title">Projet WoodyCraft</h3>
-            <span class="proj__badge">Laravel • Tailwind</span>
-          </div>
-          <p class="proj__text dim">
-            Site e-commerce : catalogue, panier/gestion produits, CRUD, MVC, tests unitaires.
-          </p>
-          <div class="proj__actions">
-            <button class="btn btn--small" type="button">Détails</button>
-            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
-          </div>
-        </article>
-
-        <article class="proj" data-modal="unity">
-          <div class="proj__top">
-            <h3 class="proj__title">Jeu vidéo (Unity)</h3>
-            <span class="proj__badge">C# • Unity</span>
-          </div>
-          <p class="proj__text dim">
-            Projet ludique mettant en pratique C# et la logique de programmation.
-          </p>
-          <div class="proj__actions">
-            <button class="btn btn--small" type="button">Détails</button>
-            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Démo</a>
-          </div>
-        </article>
-        
-        <article class="proj" data-modal="monopoly">
-          <div class="proj__top">
-            <h3 class="proj__title">Création d’un Monopoly</h3>
-            <span class="proj__badge">Python</span>
-          </div>
-          <p class="proj__text dim">Réinterprétation numérique du jeu de société : règles & interface interactive.</p>
-          <div class="proj__actions">
-            <button class="btn btn--small" type="button">Détails</button>
-            <a class="btn btn--small btn--ghost" href="#" onclick="return false;">Code</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="watch">
-      <div class="section__head">
-        <h2 class="section__title">Veille technologique</h2>
-      </div>
-
       <div class="panel reveal">
-        <div class="watch__topic">
-          <span class="pill">Sujet</span>
-          <h3 class="watch__title">Veille technologique — à peaufiner (UnrealEngine , c++ , java)</h3>
-        </div>
-
-        <div class="watch__grid">
-          <article class="watch__card">
-            <h4 class="watch__h">Mars 2025</h4>
-            <p class="watch__p dim">Résumé du mois (2–4 lignes). Sources : articles, docs, podcasts…</p>
-          </article>
-          <article class="watch__card">
-            <h4 class="watch__h">Avril 2025</h4>
-            <p class="watch__p dim">Résumé du mois (2–4 lignes).</p>
-          </article>
-          <article class="watch__card">
-            <h4 class="watch__h">Mai 2025</h4>
-            <p class="watch__p dim">Résumé du mois (2–4 lignes).</p>
-          </article>
-          <article class="watch__card">
-            <h4 class="watch__h">…</h4>
-            <p class="watch__p dim">On complètera jusqu’à aujourd’hui.</p>
-          </article>
-        </div>
-
-        <div class="watch__sources">
-          <span class="dim">Sources (à ajouter) :</span>
-          <div class="tags">
-            <span class="tag">Doc officielle</span>
-            <span class="tag">Blog technique</span>
-            <span class="tag">Conférences</span>
-            <span class="tag">Veille RSS</span>
-          </div>
+        <p class="panel__text">
+          Mon objectif est de <span class="hi">poursuivre mes études en Bachelor ou Master en alternance</span>,
+          afin d’enrichir mes compétences et d’acquérir une <span class="hi">expérience professionnelle solide</span>
+          dans le domaine de l’informatique.
+        </p>
+        <div class="tags">
+          <span class="tag">#alternance</span>
+          <span class="tag">#développement</span>
+          <span class="tag">#web</span>
+          <span class="tag">#logiciel</span>
         </div>
       </div>
     </section>
@@ -486,7 +519,6 @@
     </section>
   </main>
 
-  <!-- Modal -->
   <dialog class="modal" id="modal">
     <div class="modal__inner">
       <div class="modal__head">
@@ -500,7 +532,6 @@
     </div>
   </dialog>
 
-  <!-- Console overlay -->
   <aside class="console" id="console" aria-hidden="true">
     <div class="console__head">
       <span class="pill">CONSOLE</span>
