@@ -161,7 +161,7 @@ const projectDetails = {
       images: [
         "img/woody_accueil.jpg",
         "img/woody_produit.jpg",
-        "img/woody_admin.jpg"
+        "img/woody_panier.jpg"
       ],
       desc: "Site e-commerce complet de vente de puzzles en bois, avec gestion catalogue et panier.",
       tech: ["Laravel", "Tailwind CSS", "MySQL", "MVC"],
@@ -204,8 +204,8 @@ const projectDetails = {
     stage1: {
       title: "Stage 1 : Découverte & Intégration Web",
       images: [
-        "img/stage_figma.jpg", 
-        "img/stage_wp_admin.jpg",
+        "img/stage_figma_w.jpg", 
+        "img/stage_figma.jpg",
         "img/stage_resultat.jpg"
       ],
       desc: "Ma toute première expérience en entreprise. J'ai découvert le métier d'intégrateur web au sein de l'agence Innolive.",
