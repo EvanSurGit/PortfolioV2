@@ -159,9 +159,9 @@ const projectDetails = {
     woody: {
       title: "WoodyCraft — E-commerce (Laravel)",
       images: [
-        "img/woody_accueil.jpg",
-        "img/woody_produit.jpg",
-        "img/woody_panier.jpg"
+        "img/woody_accueil.JPG",  // .JPG majuscule
+        "img/woody_produit.JPG",
+        "img/woody_panier.JPG"
       ],
       desc: "Site e-commerce complet de vente de puzzles en bois, avec gestion catalogue et panier.",
       tech: ["Laravel", "Tailwind CSS", "MySQL", "MVC"],
@@ -174,8 +174,8 @@ const projectDetails = {
     unity: {
       title: "Certification Unity — Jeu de Course",
       images: [
-        "img/unity_setup.jpg",
-        "img/unity_game.jpg"
+        "img/unity_setup.JPG",
+        "img/unity_game.JPG"
       ],
       desc: "Projet réalisé en autonomie via un parcours de certification en ligne. Création d'un jeu de course simple (voiture sur ligne droite devant éviter des obstacles).",
       tech: ["Unity", "C#", "Virtual Machine", "Visual Studio"],
@@ -188,8 +188,8 @@ const projectDetails = {
     monopoly: {
       title: "Monopoly — Version Console (Python)",
       images: [
-        "img/python_code.jpg",
-        "img/python_run.jpg"
+        "img/python_code.JPG",
+        "img/python_run.JPG"
       ],
       desc: "Réimplémentation des règles du Monopoly en ligne de commande.",
       tech: ["Python", "POO", "Algorithmique"],
@@ -199,14 +199,12 @@ const projectDetails = {
       difficulties: "La gestion des tours de jeu et des cas particuliers (prison, doubles) a demandé une machine à états rigoureuse."
     },
 
-    // --- MISE À JOUR DES STAGES ---
-
     stage1: {
       title: "Stage 1 : Découverte & Intégration Web",
       images: [
-        "img/stage_figma_w.jpg", 
-        "img/stage_figma.jpg",
-        "img/stage_resultat.jpg"
+        "img/stage_figma_w.JPG", 
+        "img/stage_figma.JPG",
+        "img/stage_resultat.JPG"
       ],
       desc: "Ma toute première expérience en entreprise. J'ai découvert le métier d'intégrateur web au sein de l'agence Innolive.",
       tech: ["WordPress", "Elementor", "Figma", "Relation Client"],
@@ -219,9 +217,9 @@ const projectDetails = {
     stage2: {
       title: "Stage 2 : Autonomie & Perfectionnisme",
       images: [
-        "img/stage_marquet_shop.jpg", 
-        "img/stage_marquet_responsive.jpg",
-        "img/stage_equipe.jpg"
+        "img/stage_marquet_shop.JPG", 
+        "img/stage_marquet_responsive.JPG",
+        "img/stage_equipe.JPG"
       ],
       desc: "Retour chez Innolive avec de nouveaux collègues. Une intégration humaine réussie (je faisais partie de l'équipe), mais un défi technique plus solitaire.",
       tech: ["WooCommerce", "CSS Responsive", "Maintenance", "Travail d'équipe"],
